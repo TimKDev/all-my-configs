@@ -1,0 +1,45 @@
+" leader key definition
+let mapleader = ' '
+
+" Extensions
+" sync vim clipboard with OS clipboard
+set clipboard=unnamed,unnamedplus
+
+set hlsearch
+" remove search highlights
+nnoremap <Esc> :nohlsearch<cr>
+nnoremap <C-c> <Esc>
+
+" make search case insensitive
+set ignorecase
+
+" make search case sensitive when an uppercase letter is used
+set smartcase
+
+" start search while typing
+set incsearch
+
+set number relativenumber
+
+" Remap delete commands to use the black hole register
+nnoremap d "_d
+nnoremap dd "_dd
+nnoremap D "_D
+vnoremap d "_d
+vnoremap x "_x
+
+nnoremap X d
+nnoremap XX dd
+vnoremap X d
+
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+" paste over without overwriting default register
+xnoremap p P
+
+" move between split windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
